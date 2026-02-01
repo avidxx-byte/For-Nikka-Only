@@ -59,23 +59,34 @@ h1 {
     text-shadow: 2px 2px white;
 }
 
-/* This is the "Cool" Message Card */
 .message-card {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    padding: 15px 25px;
-    border-radius: 20px;
+    /* Notebook Paper Look */
+    background-color: #fff !important;
+    background-image: 
+        /* Vertical Red Margin Line */
+        linear-gradient(90deg, transparent 39px, #ab4442 39px, #ab4442 41px, transparent 41px),
+        /* Horizontal Blue Lines */
+        linear-gradient(#eee .1em, transparent .1em) !important;
+    background-size: 100% 1.5em; /* This controls the spacing between lines */
+    
+    padding: 30px 20px 20px 50px; /* Extra padding on the left for the margin */
+    border-radius: 5px;
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    transform: rotate(-2deg); /* Subtle tilt */
-    margin: 10px;
+    border: 1px solid #ddd;
+    transform: rotate(-1deg); /* Slight tilt for realism */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    max-width: 85%;
+    text-align: left; /* Aligns text like a real note */
 }
 
 #message { 
-    color: #4a4a4a; 
+    font-family: 'Indie Flower', cursive ;
+    color: #2c3e50; 
     font-size: 1.4rem;
+    line-height: 1.5em; /* Matches the background-size height */
     margin: 0;
 }
+
 
 .btn-group { margin-top: 25px; }
 
