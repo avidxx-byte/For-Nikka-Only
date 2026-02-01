@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear ❤️</Nikka>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img id="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PQsBM/giphy.gif" alt="Cute bear">
+        
+        <h1 id="question">Will you be my Valentine?</h1>
+        
+        <p id="message" style="margin-bottom: 20px; font-size: 1.1rem; color: #ff4d4d;">
+            Hello my mahal, Will you be my Valentine? <br>
+            Please say yes? 🌹
+        </p>
+        
+        <div class="btn-group">
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
