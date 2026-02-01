@@ -26,24 +26,21 @@ yesBtn.addEventListener("click", () => {
 });
 
 function moveButton() {
-    // 1. Get the padding/margin to keep it away from the very edge
-    const padding = 50; 
+    // 1. Calculate safe bounds (80% of screen to keep it centered)
+    const widthScope = window.innerWidth * 0.8;
+    const heightScope = window.innerHeight * 0.8;
     
-    // 2. Calculate the maximum available width and height
-    const maxWidth = window.innerWidth - noBtn.offsetWidth - padding;
-    const maxHeight = window.innerHeight - noBtn.offsetHeight - padding;
+    // 2. Generate random position within that 80% scope
+    const i = Math.floor(Math.random() * widthScope) + (window.innerWidth * 0.1);
+    const j = Math.floor(Math.random() * heightScope) + (window.innerHeight * 0.1);
 
-    // 3. Ensure the random number is at least 'padding' pixels away from 0
-    const i = Math.max(padding, Math.floor(Math.random() * maxWidth));
-    const j = Math.max(padding, Math.floor(Math.random() * maxHeight));
-
-    // 4. Force 'fixed' position so it doesn't care about the notebook card
+    // 3. Force the button to these coordinates
     noBtn.style.position = "fixed";
     noBtn.style.left = i + "px";
     noBtn.style.top = j + "px";
     
-    // 5. Make it stay on top of everything
-    noBtn.style.zIndex = "1000";
+    // 4. Ensure it's on the very top layer
+    noBtn.style.zIndex = "9999";
 }
 
 noBtn.addEventListener("mouseover", moveButton);
