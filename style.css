@@ -111,4 +111,6 @@ button {
     background: white;
     color: #ff4d6d;
     border: 2px solid #ff4d6d;
+    margin: 0 !important; /* Force margin to zero */
+    position: relative; 
 }
