@@ -26,11 +26,24 @@ yesBtn.addEventListener("click", () => {
 });
 
 function moveButton() {
-    const i = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth - 20));
-    const j = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight - 20));
+    // 1. Get the padding/margin to keep it away from the very edge
+    const padding = 50; 
+    
+    // 2. Calculate the maximum available width and height
+    const maxWidth = window.innerWidth - noBtn.offsetWidth - padding;
+    const maxHeight = window.innerHeight - noBtn.offsetHeight - padding;
+
+    // 3. Ensure the random number is at least 'padding' pixels away from 0
+    const i = Math.max(padding, Math.floor(Math.random() * maxWidth));
+    const j = Math.max(padding, Math.floor(Math.random() * maxHeight));
+
+    // 4. Force 'fixed' position so it doesn't care about the notebook card
     noBtn.style.position = "fixed";
     noBtn.style.left = i + "px";
     noBtn.style.top = j + "px";
+    
+    // 5. Make it stay on top of everything
+    noBtn.style.zIndex = "1000";
 }
 
 noBtn.addEventListener("mouseover", moveButton);
