@@ -9,7 +9,7 @@ const rightImg = document.querySelector(".right");
 yesBtn.addEventListener("click", () => {
     // 1. Update the Text
     document.getElementById("question").innerHTML = "Yay! Best day ever! ❤️";
-    document.getElementById("message").innerHTML = "Mahal na mahal kita, Nikka! Be my Valentine forevermore! 😘";
+    document.getElementById("message").innerHTML = "Mahal na mahal kita, baebii! Be my Valentine forevermore! 😘";
     
     // 2. Hide the side photos and the buttons
     leftImg.style.display = "none";
